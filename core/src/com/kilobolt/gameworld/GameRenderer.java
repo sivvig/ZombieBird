@@ -35,10 +35,6 @@ public class GameRenderer {
         // Chooses RGB Color of 87, 109, 120 at full opacity
         shapeRenderer.setColor(87 / 255.0f, 109 / 255.0f, 120 / 255.0f, 1);
 
-        // Draws the rectangle from myWorld (Using ShapeType.Filled)
-        shapeRenderer.rect(myWorld.getRect().x, myWorld.getRect().y,
-                myWorld.getRect().width, myWorld.getRect().height);
-
         // Tells the shapeRenderer to finish rendering
         // We MUST do this every time.
         shapeRenderer.end();
@@ -52,10 +48,6 @@ public class GameRenderer {
 
         // Chooses RGB Color of 255, 109, 120 at full opacity
         shapeRenderer.setColor(255 / 255.0f, 109 / 255.0f, 120 / 255.0f, 1);
-
-        // Draws the rectangle from myWorld (Using ShapeType.Line)
-        shapeRenderer.rect(myWorld.getRect().x, myWorld.getRect().y,
-                myWorld.getRect().width, myWorld.getRect().height);
 
         shapeRenderer.end();
     }
