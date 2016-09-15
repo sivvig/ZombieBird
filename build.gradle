@@ -6,8 +6,8 @@ buildscript {
     }
     dependencies {
         classpath 'de.richsource.gradle.plugins:gwt-gradle-plugin:0.4'
-        classpath 'com.android.tools.build:gradle:0.10+'
-        classpath 'com.github.jtakakura:gradle-robovm-plugin:0.0.9'
+        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'org.robovm:robovm-gradle-plugin:1.9.0'
     }
 }
 
@@ -52,6 +52,7 @@ project(":android") {
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
+        compile fileTree(dir: '../libs', include: '*.jar')
     }
 }
 
@@ -89,6 +90,8 @@ project(":core") {
 
     dependencies {
         compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+        compile "aurelienribon:tweenengine:6.3.3"
+        compile "aurelienribon:tweenengine:6.3.3:sources"
     }
 }
 
